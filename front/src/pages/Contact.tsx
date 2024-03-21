@@ -1,30 +1,42 @@
+import React from "react";
 import {
   IonContent,
   IonHeader,
   IonPage,
   IonTitle,
   IonToolbar,
+  IonButton,
+  IonIcon,
+  IonMenuButton,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
-import "./Contact.css";
+import { menuOutline, personCircleOutline } from "ionicons/icons";
+import BasePage from "../components/BasePage";
 
 const Contact: React.FC = () => {
+  const header = (
+    <IonHeader mode="md" id="">
+      <IonToolbar>
+        <div>
+          <h1>CareCover</h1>
+        </div>
+        <IonButton slot="end" fill="clear">
+          <IonIcon icon={personCircleOutline} />
+        </IonButton>
+        <IonButton slot="end" fill="clear">
+          <IonMenuButton autoHide={false}>
+            <IonIcon icon={menuOutline} />
+          </IonMenuButton>
+        </IonButton>
+      </IonToolbar>
+    </IonHeader>
+  );
+
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 3</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 3</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+    <BasePage header={header}>
+      <IonContent>
+        <h1>Content</h1>
       </IonContent>
-    </IonPage>
+    </BasePage>
   );
 };
 
