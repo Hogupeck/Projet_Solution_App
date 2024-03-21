@@ -1,10 +1,78 @@
-
-.app-title {
+.headerTable1 {
+    position: relative;
+  }
+  
+  .headingAcceuilImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .headeroverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .headeroverlay h1 {
+    font-size: 2.5rem;
+  }
+  
+  .headeroverlayParagraph {
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+  .contact {
+    margin-top: 20px;
+  }
+  
+  .contact a {
+    color: white;
+    text-decoration: none;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact a:hover {
+    background-color: #0056b3;
+  }
+  
+  .app-title {
     font-size: 1.5rem;
   }
   
   .icon {
     font-size: 1.5rem;
-    margin-left: 8px;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  /* Media queries for mobile */
+  @media only screen and (max-width: 600px) {
+    .headeroverlay h1 {
+      font-size: 2rem;
+    }
+  
+    .headeroverlayParagraph {
+      font-size: 0.9rem;
+    }
+  
+    .contact a {
+      padding: 8px 16px;
+    }
+  
+    .app-title {
+      font-size: 1.2rem;
+    }
+  
+    .icon {
+      font-size: 1.2rem;
+    }
   }
   
