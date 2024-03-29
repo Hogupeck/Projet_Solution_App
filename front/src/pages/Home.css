@@ -1,1 +1,16 @@
-
+.categories {
+    text-align: center;
+    margin-top: 20px; /* ajustez la marge supérieure selon vos besoins */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .categories h2 {
+    margin-bottom: 30px; /* espace entre le titre et les cercles */
+  }
+  
+  .categories .row {
+    justify-content: center;
+  }
+  
